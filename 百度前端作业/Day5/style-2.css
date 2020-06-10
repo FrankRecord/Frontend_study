@@ -1,0 +1,47 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+h1{
+    padding: 20px 0px;
+}
+h3{
+    padding: 20px 0px;
+}
+h5{
+    padding: 20px 0px;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 90%;
+    height: 90%;
+}
+.resume-box{
+    overflow: hidden;
+    width: 90%;
+    height: 100%;
+    margin: 0px auto;
+}
+.left-box{
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    background-color: #1cb7fd;
+}
+.right-box{
+    width: 85%;
+    margin-left: 2%;
+}
+.parent-clear-float{
+    overflow: hidden;
+}
+.float-left{
+    float: left;
+}
+.float-left2{
+    float: left;
+}
