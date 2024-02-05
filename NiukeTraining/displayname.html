@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<button class='up'>销量升序</button>
+<button class='down'>销量降序</button>
+<ul></ul>
+
+<script>
+  let cups = [
+    { type: 1, price: 100, color: 'black', sales: 3000, name: '牛客logo马克杯' },
+    { type: 2, price: 40, color: 'blue', sales: 1000, name: '无盖星空杯' },
+    { type: 4, price: 60, color: 'green', sales: 200, name: '老式茶杯' },
+    { type: 3, price: 50, color: 'green', sales: 600, name: '欧式印花杯' }
+  ]
+  let ul = document.querySelector('ul');
+  let upbtn = document.querySelector('.up');
+  let downbtn = document.querySelector('.down');
+  // 补全代码
+  cups.forEach((item) => {
+    let liNode = document.createElement("li");
+    let liText = document.createTextNode(item.name);
+    liNode.appendChild(liText);
+    ul.appendChild(liNode)
+  })
+  upbtn.onclick = function(){
+    ul.innerHTML = '';
+    cups.sort((a,b) => {
+      return a.sales - b.sales;
+    })
+    console.log(cups)
+    cups.forEach((item) => {
+      let liNode = document.createElement("li");
+      let liText = document.createTextNode(item.name);
+      liNode.appendChild(liText);
+      ul.appendChild(liNode);
+    })
+  }
+
+  downbtn.onclick = function(){
+    ul.innerHTML = '';
+    cups.sort((a,b) => {
+      return b.sales - a.sales;
+    })
+    console.log(cups)
+    cups.forEach((item) => {
+      let liNode = document.createElement("li");
+      let liText = document.createTextNode(item.name);
+      liNode.appendChild(liText);
+      ul.appendChild(liNode)
+    })
+  }
+</script>
+</body>
+</html>

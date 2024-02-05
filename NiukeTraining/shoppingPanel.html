@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+</head>
+<body>
+<table>
+  <thead>
+  <caption>
+    商品
+  </caption>
+  </thead>
+  <tbody>
+  <tr>
+    <td>炸鸡</td>
+    <td>28元</td>
+    <td><button id="zjtaiduola">-</button></td>
+    <td><span id="zjsl">0</span></td>
+    <td><button id="zjtaishaola">+</button></td>
+  </tr>
+  <tr>
+    <td>可乐</td>
+    <td>5元</td>
+    <td><button id="kltaiduola">-</button></td>
+    <td><span id="klsl">0</span></td>
+    <td><button id="kltaishaola">+</button></td>
+  </tr>
+  <tr>
+    <td>总价：</td>
+    <td><span id="total">0</span></td>
+  </tr>
+  </tbody>
+</table>
+
+<script type="text/javascript">
+  // 补全代码
+  //获取element
+  let minusChicken = document.getElementById('zjtaiduola')
+  let plusChicken = document.getElementById('zjtaishaola')
+  let chickenNumElem = document.getElementById('zjsl')
+
+  let minusCola = document.getElementById('kltaiduola')
+  let plusCola = document.getElementById('kltaishaola')
+  let colaNumElem = document.getElementById('klsl')
+  let total = document.getElementById('total')
+
+  let chickenNum = 0
+  let colaNum = 0
+
+  function redraw(){
+    chickenNumElem.innerHTML = chickenNum
+    colaNumElem.innerHTML = colaNum
+    total.innerHTML = chickenNum * 28 + colaNum * 5;
+  }
+  minusChicken.onclick = () => {
+    chickenNum --;
+    redraw()
+  }
+  plusChicken.onclick = () => {
+    chickenNum ++;
+    redraw()
+  }
+  minusCola.onclick = () => {
+    colaNum --;
+    redraw()
+  }
+  plusCola.onclick =() => {
+    colaNum ++;
+    redraw()
+  }
+
+</script>
+</body>
+</html>

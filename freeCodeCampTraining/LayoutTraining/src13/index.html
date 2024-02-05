@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      #border-line{
+        width: 100px;
+        height: 10px;
+        background: #bb99ff;
+        transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 2s;
+        transform: scaleX(0);
+      }
+      body{
+        font-size: 30px;
+        font-family: 'Anton', sans-serif;
+        color: #0a0a23;
+      }
+      #word{
+        transition: all cubic-bezier(0.25, 0.1, 0.25, 1) 2s;
+        transform: translateX(0);
+      }
+
+    </style>
+</head>
+<body>
+    <div id="word">前端学院</div>
+    <div id="border-line"></div>
+    <button id="switch-style">切换样式</button>
+</body>
+
+<script>
+  window.onload = function(){
+    const button = document.getElementById("switch-style")
+    button.onclick = function(){
+      const border = document.getElementById("border-line")
+      const word = document.getElementById("word")
+      if(border.style.transform === "scaleX(0)"){
+        border.style.transform = "scaleX(1)"
+        word.style.color = "blue"
+        word.style.transform = "translateX(1)"
+
+      }else{
+        border.style.transform = "scaleX(0)"
+        word.style.color = "black"
+        word.style.transform = "translateX(0)"
+      }
+    }
+  }
+</script>
+</html>

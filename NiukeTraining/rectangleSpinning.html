@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <style type="text/css">
+    #rect {
+      width: 120px;
+      height: 100px;
+      background-color: black;
+      /*补全代码*/
+      animation: rect 10s infinite ease-in-out;
+    }
+    @keyframes rect {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- 补全代码 -->
+<div id="rect"></div>
+<input id="range" type="range" name="rectRange" min="1" max="10" step="1" value="1"/>
+<label for = "range">Range</label>
+<span id="rangeValue">1</span>
+<p>1</p>
+
+
+<script type="text/javascript">
+  // 补全代码
+
+  let range = document.getElementById("range");
+
+range.onchange = function(){
+  let valueNode = document.getElementById("rangeValue");
+  valueNode.innerHTML = range.value;
+  let rect = document.getElementById("rect")
+  rect.style.animationDuration = `${11 - range.value}s`
+}
+  const _elementKey = () => {
+    // 补全代码
+    let pElem = document.querySelector("p");
+    return new Map([[pElem, pElem.innerHTML]]);
+  }
+  console.log(_elementKey())
+</script>
+</body>
+</html>

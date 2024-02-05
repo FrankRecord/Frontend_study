@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+  const _getParams = (url) => {
+    // 补全代码
+    let paramObj = {}
+    const paramsArr = url.split("?")[1].split("&");
+    paramsArr.forEach((item) => {
+      const itemArr = item.split("=");
+      console.log(itemArr[0],itemArr[1])
+      paramObj[itemArr[0]] = itemArr[1];
+    })
+
+    return paramObj
+  }
+  console.log(_getParams("https://scriptoj.com/problems?offset=100&limit=10"))
+</script>
+</body>
+</html>
